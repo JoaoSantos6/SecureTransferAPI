@@ -19,3 +19,9 @@ class CustomerModel(Base):
     is_verified = sa.Column(sa.Boolean, nullable=False, default=False)
     created_at = sa.Column(sa.DateTime, nullable=False, server_default=sa.func.now())
     updated_at = sa.Column(sa.DateTime, nullable=False, server_default=sa.func.now(), onupdate=sa.func.now())
+    
+    def __repr__(self):
+        return (
+            f"<CostumerModel(id={self.id}, cpf='{self.cpf}', email='{self.email}', "
+            f"full_name='{self.full_name}', is_active={self.is_active}, is_verified={self.is_verified})>"
+        )
