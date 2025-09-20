@@ -24,6 +24,6 @@ class BankModel(Base):
 
     def __repr__(self):
         return (
-            f"<BankModel(id={self.id}, bacen_code='{self.bacen_code}', name='{self.name}', "
+            f"<BankModel(id={self.id}, name='{self.name}', "
             f"country='{self.country}', is_active={self.is_active})>"
         )
