@@ -1,0 +1,1 @@
+# Permite importar módulos do diretório app

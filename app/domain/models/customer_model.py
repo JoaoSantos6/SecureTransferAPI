@@ -4,7 +4,7 @@ import sqlalchemy.orm
 Base = sqlalchemy.orm.declarative_base()
 
 class CustomerModel(Base):
-    __tablename__ = 'costumers'
+    __tablename__ = 'Customers'
     
     id = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
     cpf = sa.Column(sa.String(14), nullable=False)
@@ -22,6 +22,6 @@ class CustomerModel(Base):
     
     def __repr__(self):
         return (
-            f"<CostumerModel(id={self.id}, cpf='{self.cpf}', email='{self.email}', "
+            f"<CustomerModel(id={self.id}, cpf='{self.cpf}', email='{self.email}', "
             f"full_name='{self.full_name}', is_active={self.is_active}, is_verified={self.is_verified})>"
         )
